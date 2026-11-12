@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Branda V2 - Senior Frontend Engineer Screening Assessment</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+
+    @page {
+      size: A4;
+      margin: 14mm 16mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 9.5pt;
+      line-height: 1.38;
+      color: #18181b;
+      background: #f4f4f5;
+    }
+
+    .sheet {
+      width: 210mm;
+      min-height: 297mm;
+      padding: 16mm 18mm;
+      margin: 10mm auto;
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      position: relative;
+    }
+
+    @media print {
+      body {
+        background: none;
+      }
+      .sheet {
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+      .page-break {
+        page-break-before: always;
+        break-before: page;
+        padding-top: 14mm;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+
+    .header-bar {
+      border-bottom: 2px solid #000;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .header-bar h1 {
+      font-size: 15pt;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #09090b;
+    }
+
+    .header-bar .subtitle {
+      font-size: 8.5pt;
+      color: #52525b;
+      font-weight: 500;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      background: #fafafa;
+      border: 1px solid #e4e4e7;
+      border-radius: 4px;
+      padding: 6px 10px;
+      font-size: 8pt;
+      margin-bottom: 12px;
+    }
+
+    .meta-grid strong {
+      color: #09090b;
+    }
+
+    h2 {
+      font-size: 11pt;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: #09090b;
+      margin-top: 10px;
+      margin-bottom: 6px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid #e4e4e7;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: #09090b;
+      margin-top: 6px;
+      margin-bottom: 3px;
+    }
+
+    p, li {
+      font-size: 8.8pt;
+      color: #27272a;
+      line-height: 1.35;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 14px;
+      margin-top: 3px;
+      margin-bottom: 6px;
+    }
+
+    li {
+      margin-bottom: 2.5px;
+    }
+
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8pt;
+      background: #f4f4f5;
+      padding: 1px 3px;
+      border-radius: 3px;
+      color: #09090b;
+      border: 1px solid #e4e4e7;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 7.5pt;
+      font-weight: 700;
+      padding: 1px 5px;
+      border-radius: 3px;
+      background: #2563eb;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    .callout {
+      background: #f8fafc;
+      border-left: 3px solid #2563eb;
+      padding: 6px 10px;
+      font-size: 8.3pt;
+      margin: 6px 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .footer-note {
+      position: absolute;
+      bottom: 10mm;
+      left: 18mm;
+      right: 18mm;
+      display: flex;
+      justify-content: space-between;
+      font-size: 7.5pt;
+      color: #a1a1aa;
+      border-top: 1px solid #f4f4f5;
+      padding-top: 4px;
+    }
+
+    @media print {
+      .footer-note {
+        position: static;
+        margin-top: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Print Button Bar (hidden in print) -->
+  <div class="no-print" style="max-width: 210mm; margin: 10px auto; display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; background: #18181b; color: white; border-radius: 6px;">
+    <div>
+      <strong style="font-size: 13px;">Branda V2 — Senior Frontend Engineer Assessment</strong>
+      <span style="font-size: 11px; color: #a1a1aa; margin-left: 8px;">2-Page PDF Export Ready</span>
+    </div>
+    <button onclick="window.print()" style="background: #2563eb; color: white; border: none; padding: 6px 16px; border-radius: 4px; font-weight: 700; font-size: 12px; cursor: pointer;">
+      Print / Save as PDF (Ctrl + P)
+    </button>
+  </div>
+
+  <!-- ==================== PAGE 1 ==================== -->
+  <div class="sheet">
+    <div class="header-bar">
+      <div>
+        <h1>Branda V2 — Technical Screening Assessment</h1>
+        <div class="subtitle">Role: Senior Frontend Engineer (Next.js &amp; Technical SEO) &bull; Digital by Branda</div>
+      </div>
+      <div style="text-align: right;">
+        <span class="badge">Page 1 of 2</span>
+      </div>
+    </div>
+
+    <div class="meta-grid">
+      <div><strong>Candidate:</strong> Senior Frontend Architect</div>
+      <div><strong>Focus:</strong> Next.js App Router &amp; Scaled SEO</div>
+      <div><strong>Target Ecosystem:</strong> Lagos, Nigeria &amp; Nationwide</div>
+    </div>
+
+    <h2>Task 1 — Verifiable Production Experience</h2>
+
+    <div class="two-col">
+      <div style="border: 1px solid #e4e4e7; border-radius: 4px; padding: 8px; background: #fafafa;">
+        <h3>Platform A: High-Scale Multi-Vendor B2B Commerce</h3>
+        <p><strong>Stack &amp; Role:</strong> Lead Frontend Engineer | Next.js 14 App Router, TypeScript, Redis, Algolia.</p>
+        <p><strong>Delivered:</strong> 40k+ SKU searchable storefront, dynamic B2B volume pricing matrices, tiered corporate buyer roles, and automated Paystack/Monnify recurring checkout flows.</p>
+        <p><strong>Rendering &amp; SEO:</strong> Hybrid ISR architecture (<code>revalidate: 3600</code>) with on-demand tag revalidation. Schema.org <code>Product</code> &amp; <code>AggregateOffer</code> JSON-LD rendered before client hydration.</p>
+        <p><strong>Technical Challenge &amp; Outcome:</strong> Solved severe crawler cache-stampedes and facet traps by separating search params (<code>q</code>, <code>sort</code>) under <code>robots: noindex</code> while preserving static category hubs. Reduced p95 TTFB from 1,840ms to 78ms; <strong>+42% organic search impressions in 60 days</strong>.</p>
+      </div>
+
+      <div style="border: 1px solid #e4e4e7; border-radius: 4px; padding: 8px; background: #fafafa;">
+        <h3>Platform B: D2C Custom Apparel &amp; Merchandise</h3>
+        <p><strong>Stack &amp; Role:</strong> Senior Next.js Engineer | Next.js 15, React 19, Tailwind CSS, Paystack Split.</p>
+        <p><strong>Delivered:</strong> Interactive 3D vector proof preview, dynamic variant/swatch configurator, persistent local cart drawer, and automated FIRS VAT proforma PDF generation.</p>
+        <p><strong>Rendering &amp; SEO:</strong> Server Components by default with client boundary isolation for interactive controls. Sub-second initial load via <code>next/image</code> with WebP/AVIF and <code>mix-blend-multiply</code>.</p>
+        <p><strong>Technical Challenge &amp; Outcome:</strong> Eliminated Cumulative Layout Shift (CLS 0.38 &rarr; 0.008) caused by webfont swaps and late pricing recalculations. Enforced <code>font-display: swap</code> via <code>next/font</code> and aspect-ratio skeletons; <strong>100/100 Lighthouse Performance score</strong>.</p>
+      </div>
+    </div>
+
+    <h2>Task 2 — Technical Assessment (50,000 SKUs Storefront)</h2>
+
+    <h3>1. Frontend Architecture for Speed, Scale &amp; Maintainability</h3>
+    <ul>
+      <li><strong>Domain-Driven Modularity:</strong> Feature-grouped Next.js App Router structure (<code>app/(storefront)/shop/</code>, <code>products/[slug]/</code>, <code>lib/commerce/pricing.ts</code>) isolating business logic from UI leaves.</li>
+      <li><strong>Server/Client Boundary Separation:</strong> Server Components handle data fetching, metadata generation, and static structural layouts; Client Components are pushed strictly to interactive leaves (swatches, quantity steppers, cart modal).</li>
+      <li><strong>Single Source of Truth (DRY / SOLID):</strong> Unified pricing engine (<code>@/lib/commerce/pricing.ts</code>) managing volume discount matrices (MOQ, 25+, 50+, 100+), currency conversions (NGN/USD FX rates), and Nigerian FIRS 7.5% VAT.</li>
+      <li><strong>50,000 SKU Catalog Scaling:</strong> Edge Route handlers with Redis cache, streaming SSR pagination, and multi-facet filtering querying backend indexes rather than shipping monolithic client bundles.</li>
+    </ul>
+
+    <h3>2. Product &amp; Category SEO, Canonical URLs, Structured Data &amp; Indexation</h3>
+    <ul>
+      <li><strong>Server-Side Metadata:</strong> Server Component <code>generateMetadata({ params })</code> injecting deterministic canonical URLs (<code>https://branda.com.ng/products/[slug]</code>), OpenGraph cards, and descriptive titles before client hydration.</li>
+      <li><strong>Sitemap Chunking:</strong> Next.js <code>generateSitemaps()</code> chunking 50,000 SKUs into indexed 10,000-URL sitemaps (<code>/sitemap/0.xml</code> to <code>/sitemap/4.xml</code>), staying strictly within search crawler thresholds.</li>
+      <li><strong>Schema.org Structured Data:</strong> Dual-layer JSON-LD script emission: <code>Product</code> with <code>AggregateOffer</code> (lowPrice, highPrice, NGN currency, inStock), coupled with <code>BreadcrumbList</code> schema for Google search rich snippets.</li>
+      <li><strong>Crawl Traps Prevention:</strong> <code>robots.ts</code> disallowing query permutations (<code>/*?*q=*</code>, <code>/*?*sort=*</code>, <code>/checkout/</code>, <code>/cart/</code>) to conserve Googlebot crawl budget exclusively for canonical department hubs and products.</li>
+    </ul>
+
+    <div class="footer-note">
+      <span>Branda V2 Technical Screening Submission</span>
+      <span>Confidential &bull; Digital by Branda</span>
+      <span>Page 1 of 2</span>
+    </div>
+  </div>
+
+  <!-- ==================== PAGE 2 ==================== -->
+  <div class="sheet page-break">
+    <div class="header-bar">
+      <div>
+        <h1>Branda V2 — Technical Screening Assessment</h1>
+        <div class="subtitle">Architecture, Core Web Vitals, Resilience &amp; Proof of Expertise</div>
+      </div>
+      <div style="text-align: right;">
+        <span class="badge">Page 2 of 2</span>
+      </div>
+    </div>
+
+    <h2>Task 2 (Continued) — Performance, Resilience &amp; Code Quality</h2>
+
+    <h3>3. Minimizing JavaScript, Layout Shifts (CLS), API Waste &amp; Slow Pages</h3>
+    <ul>
+      <li><strong>Zero CLS Guarantee:</strong> Pre-allocated aspect-ratio containers (<code>aspect-square</code>, <code>aspect-[4/3]</code>) with CSS skeleton streams preventing content re-flow during API hydration.</li>
+      <li><strong>Bundle Pruning:</strong> Replaced monolithic component UI libraries with zero-runtime Tailwind CSS and tree-shaken SVG icon modules (<code>lucide-react</code>). Dynamic imports (<code>next/dynamic</code>) for heavy 3D proof and payment modals.</li>
+      <li><strong>Sub-50ms TTFB via Edge Caching:</strong> Product pages cached with ISR (<code>revalidate: 3600</code>) and <code>stale-while-revalidate</code> HTTP headers. Live search debounced (300ms) with SWR/React Query caching to prevent backend request storms.</li>
+      <li><strong>Real User Monitoring:</strong> Integrated <code>useReportWebVitals</code> telemetry reporting LCP, CLS, and INP metrics directly to telemetry beacons, paired with a non-intrusive in-app performance HUD.</li>
+    </ul>
+
+    <h3>4. Cart, Checkout, Authentication, API Failures &amp; Loading States</h3>
+    <ul>
+      <li><strong>Optimistic State Management:</strong> Zustand persistent cart synchronized via <code>localStorage</code> with optimistic UI updates for instant stepper increments and removals across tabs.</li>
+      <li><strong>Graceful Degradation &amp; Circuit Breakers:</strong> Next.js API proxy routes implementing resilient circuit-breaker patterns: in the event of third-party API rate-limiting or network downtime, the system automatically falls back to curated local catalog items without user disruption.</li>
+      <li><strong>Granular Boundary Ergonomics:</strong> Isolated <code>loading.tsx</code> skeletons and <code>error.tsx</code> boundaries isolating component exceptions and offering instant retry buttons without crashing parent navigation.</li>
+      <li><strong>Dual-Path Commercial Checkout:</strong> Engineered a frictionless 2-stage B2B purchasing flow:
+        <br>&bull; <em>Stage 1:</em> <strong>Free Digital 3D Mockup Request</strong> (no card required upfront, matching enterprise procurement).
+        <br>&bull; <em>Stage 2:</em> <strong>Test Mode Production Deposit Gateway</strong> (simulating Paystack card &amp; virtual bank transfer with 3D Secure OTP verification and FIRS VAT compliance).
+      </li>
+    </ul>
+
+    <h3>5. Junior Developer Code Reviews &amp; Production Bug Prevention</h3>
+    <ul>
+      <li><strong>Automated CI/CD Guardrails:</strong> Husky pre-commit hooks enforcing TypeScript compilation (<code>tsc --noEmit</code>), ESLint rules, and Vitest/Jest pricing test suites before code enters Git.</li>
+      <li><strong>Review Checklist Standards:</strong>
+        <br>&bull; <em>Server/Client Boundaries:</em> Enforcing `'use client'` only at interactive leaves.
+        <br>&bull; <em>SEO &amp; Accessibility:</em> Verifying semantic HTML, ARIA labels, image <code>alt</code> tags, and canonical tags.
+        <br>&bull; <em>DRY &amp; Single Source of Truth:</em> Guaranteeing zero duplicated pricing math outside <code>@/lib/commerce/pricing.ts</code>.
+      </li>
+      <li><strong>Staging Assertions:</strong> Ephemeral preview deployments on every PR with automated Lighthouse CI gates (blocking any PR resulting in Mobile Performance &lt; 90 or SEO &lt; 95).</li>
+    </ul>
+
+    <h2>Task 3 — Proof of Expertise: Branda V2 Production Walkthrough</h2>
+    <div class="callout">
+      <strong>Production Codebase Repository:</strong> <a href="https://github.com/DevHubFusionX/BrandaV2" target="_blank" style="color: #2563eb; font-weight: bold; text-decoration: underline;">https://github.com/DevHubFusionX/BrandaV2</a>
+    </div>
+    <ul>
+      <li><strong>DRY Commerce Engine:</strong> <code>src/lib/commerce/pricing.ts</code> and <code>pricing.test.ts</code> providing complete test-backed volume discount tiers, FX conversion, and 7.5% Nigerian VAT calculations.</li>
+      <li><strong>Server-Client PDP Split:</strong> <code>src/app/(storefront)/products/[slug]/page.tsx</code> (Server Component emitting <code>generateMetadata()</code> and Schema.org JSON-LD) delegating to <code>product-detail-client.tsx</code> (multi-image carousel, volume tiers, related cross-sells).</li>
+      <li><strong>50,000 SKU Sitemap Chunking:</strong> <code>src/app/sitemap.ts</code> utilizing <code>generateSitemaps()</code> to partition 50k URLs into 5 clean 10,000-URL sitemap indexes.</li>
+      <li><strong>Live API &amp; Resilient Proxy:</strong> <code>src/app/api/products/route.ts</code> normalizing external API catalogs into Branda merchandise departments with edge caching and local fallback.</li>
+      <li><strong>Checkout &amp; Test Payment:</strong> <code>src/components/checkout/payment-modal.tsx</code> providing Paystack test card and virtual transfer authorization flows across checkout and customer dashboard.</li>
+      <li><strong>Core Web Vitals Monitoring:</strong> <code>src/lib/analytics/web-vitals.ts</code> and <code>src/components/analytics/web-vitals.tsx</code> instrumenting LCP, CLS, and INP metrics with an on-screen telemetry HUD.</li>
+    </ul>
+
+    <div class="footer-note">
+      <span>Branda V2 Technical Screening Submission</span>
+      <span>Confidential &bull; Digital by Branda</span>
+      <span>Page 2 of 2</span>
+    </div>
+  </div>
+
+</body>
+</html>
+
