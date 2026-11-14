@@ -108,7 +108,7 @@ export function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-neutral-900 py-6 px-4 text-center text-xs text-neutral-500">
-        <p>© {new Date().getFullYear()} Branda Technologies Limited. All rights reserved.</p>
+        <p>© 2026 Branda Technologies Limited. All rights reserved.</p>
       </div>
     </footer>
   );

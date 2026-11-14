@@ -89,6 +89,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       colorsCount: 3,
       slug: 'anker-3-in-1-power-bank',
       shipsLocation: 'Lagos & Nationwide',
+      imageUrl: 'https://images.unsplash.com/photo-1609592426009-0d19e917d0c3?w=600&auto=format&fit=crop&q=80',
     },
     {
       id: `${slug}-2`,
@@ -100,6 +101,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       colorsCount: 3,
       slug: 'employee-onboarding-kit',
       shipsLocation: 'Nationwide Delivery',
+      imageUrl: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=600&auto=format&fit=crop&q=80',
     },
     {
       id: `${slug}-3`,
@@ -111,6 +113,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       colorsCount: 4,
       slug: 'ahead-clubhouse-wool-cap',
       shipsLocation: 'Nationwide',
+      imageUrl: 'https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600&auto=format&fit=crop&q=80',
     },
     {
       id: `${slug}-4`,
@@ -122,6 +125,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
       colorsCount: 1,
       slug: 'moleskine-soft-cover-large-planner',
       shipsLocation: 'Nationwide',
+      imageUrl: 'https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&auto=format&fit=crop&q=80',
     },
   ];
 

@@ -89,6 +89,10 @@ export const useCart = create<CartStore>()(
     {
       name: 'branda-cart-storage',
       skipHydration: false,
+      partialize: (state) => ({
+        items: state.items,
+        currency: state.currency,
+      }),
     }
   )
 );

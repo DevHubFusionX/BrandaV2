@@ -46,12 +46,12 @@ export function reportMetric(metric: WebVitalMetric) {
   }
 
   // Dispatches beacon to analytics endpoint if configured
-  if (navigator.sendBeacon) {
+  if (typeof navigator !== 'undefined' && typeof navigator.sendBeacon === 'function') {
     const body = JSON.stringify({
       metric: metric.name,
       value: metric.value,
       rating: metric.rating,
-      page: window.location.pathname,
+      page: typeof window !== 'undefined' ? window.location.pathname : '',
       timestamp: Date.now(),
     });
     // In production, can beacon to /api/analytics/vitals

@@ -46,7 +46,7 @@ export function generateProductSchema(product: ProductSchemaInput) {
       lowPrice: product.lowPriceNGN || product.basePriceNGN,
       highPrice: product.highPriceNGN || product.basePriceNGN * 1.5,
       offerCount: 1000,
-      priceValidUntil: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+      priceValidUntil: '2027-12-31',
       availability: product.inStock !== false ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
       itemCondition: 'https://schema.org/NewCondition',
       seller: {

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useReportWebVitals } from 'next/web-vitals';
 import { Activity, ChevronUp, ChevronDown, CheckCircle2, AlertTriangle, AlertCircle } from 'lucide-react';
 import { reportMetric, WebVitalMetric, evaluateVitalRating } from '@/lib/analytics/web-vitals';
@@ -17,14 +17,14 @@ export function WebVitals() {
     }
   }, []);
 
-  useReportWebVitals((metric) => {
+  const handleWebVital = useCallback((metric: any) => {
     const vitalMetric: WebVitalMetric = {
       id: metric.id,
-      name: metric.name as any,
+      name: metric.name,
       value: metric.value,
-      rating: metric.rating || evaluateVitalRating(metric.name as any, metric.value),
+      rating: metric.rating || evaluateVitalRating(metric.name, metric.value),
       delta: metric.delta,
-      navigationType: (metric as any).navigationType,
+      navigationType: metric.navigationType,
     };
 
     reportMetric(vitalMetric);
@@ -33,7 +33,9 @@ export function WebVitals() {
       ...prev,
       [metric.name]: vitalMetric,
     }));
-  });
+  }, []);
+
+  useReportWebVitals(handleWebVital);
 
   if (!isVisible) return null;
 
